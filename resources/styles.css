@@ -1,0 +1,394 @@
+/*  UNIVERSAL STYLES    */
+
+html {
+    
+    font-size: 16px;
+    height: 100%;
+    
+}
+
+
+body {
+    background-color: #f6f4e8;
+   
+    
+    color: #1d3124;
+    font-family: sans-serif;
+  
+}
+
+a {
+    font-family: inherit;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding:0;
+    margin: 0;
+
+
+
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/*---------------------------------             HEADER               ---------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+header {
+
+    position: fixed;
+    
+    float: left;
+    width: 150px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: gold;
+
+
+}
+
+
+
+.upper_header_part {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    background-color: lightblue;
+
+
+}
+
+#profession {
+    padding: 0 0 10% 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15% 0 0 0;
+    
+}
+
+
+
+#name {
+    font-family: 'Aladin', cursive;
+    
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+}
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/*---------------------------------          MAIN NAVIGATION BAR          ---------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+.main_navigation {
+    width: 100%;
+
+}
+
+.main_navigation ul {
+    margin: 50px 0;
+    font-weight: bold;
+   
+    
+}
+
+.main_navigation ul li{
+    width: 100%;
+    text-align: center;
+    padding: 10% 0  ;
+    border-top: 1px solid salmon;
+   
+}
+
+.main_navigation ul li:nth-child(5){
+    border-bottom: 1px solid salmon;
+}
+
+.social_sites{
+    width: 100%;
+    background-color: lightsalmon;
+    min-height: 100vh;
+}
+
+.social_sites ul{
+    display: flex;
+    
+   
+
+}
+
+.social_sites ul li{
+    width: 35px;
+    height: 35px;
+    margin: 5px 0;
+
+    
+    
+   
+} 
+
+/*----------------------------------------------------------------------------------------------------*/
+/*-----------------          TOP RIGHT NAVIGATION BAR          --------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+
+.top_right_navigation{
+    
+    float: right;
+    position: fixed;
+    right:0;
+    top:0;
+    width: 150px;
+}
+
+.top_right_navigation ul li{
+    display: inline-block;
+}
+
+.top_right_navigation ul li a img{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/*-----------------          MAIN INFO TEXT SECTION IN HOME PAGE          --------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+.main_info_section {
+   
+    border: 3px solid black;
+    width: 100%;
+    min-height: 725px;
+}
+
+
+.main_info_text {
+
+    float:left;   
+    margin: 3% 10% 0 15%;
+   /*  width: 1000px;
+    height: 400px; */
+ 
+    
+
+}
+
+
+.main_info_text h1{
+    margin: 20px 0 0 0;
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+}
+
+#greeting {
+    font-family: 'Sacramento', cursive;
+    font-size: 7rem;
+}
+
+.main_info_text p {
+    margin: 40px 0 0 0;
+    
+}
+
+
+/*--------------            3D BUTTON           ------------------------*/
+
+.contact_me_btn_settings{
+
+    margin: 50px 400px;
+}
+
+.pushable-area {
+    
+    /* Firstly, lets create the area the button will be pushed into*/
+    position:relative;
+    background-color: transparent;
+    border-radius: 12px;
+    border: none;
+    padding:0;
+    
+     /* I want to make sure user will see hand and cursor changes when it finds button element */
+    cursor:pointer;
+    
+     /* An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out". See useful info.
+    
+    The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+    https://www.w3schools.com/css/css_outline.asp*/
+    outline-offset:4px;
+
+    /* preventing user to select text of the button*/
+    user-select: none;
+
+    /* the time it takes for pushable-area to get to default state. In this case how long it takes from brightened state to default*/
+    transition: filter 800ms;
+
+    /* When user tap on the button in mobile phone he will briefly see grey rectangle that serves as confirmation for him that button was tapped correctly. But I do not need this as there is enough feedback as it is and this line will remove it*/
+    -webkit-tap-highlight-color: transparent;
+    
+
+}
+.shadow {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: grey;
+    
+    /*shadow container will be moved 6px from original location of pushable-area. Note that button-front, edge and shadow have exactly same dimensions as pushable-area(their parrent) but thanks to transform:translateY() I can move them to whichever location I want. In this case 6px on the Y axis*/
+    transform: translateY(6px);
+    
+    /*for softer , more natural shadow I use blur*/
+    filter: blur(4px);
+    
+}
+
+.edge{
+    /* This is basically second layer-> 1. is front of button, 2. is edge and the 3. is shadow. And it is ll wrapped in pushable-area class*/
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    
+    /* Creates dark edges, so giving the impression of less light. I am using here linear-gradient so what it does: At the start(0%) there is black that will transition into darkred(at 8% of space). Darkred at 8% will transition to Darkred at 92%(so nothing changes) and the from darkred at 92% into black at the end of space(100%) of the element*/
+    background: linear-gradient(
+        to left,
+        black 0%,
+        darkred 8%,
+        darkred 92%,
+        black 100%
+    );
+}
+
+
+.button-front {
+    /* Setting up how front of button will look like */
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25 em;
+    background: firebrick;
+    color: white;
+    
+    /* CSS transitions allows you to change property values smoothly, over a given duration. In this case we have transform, which will reposition element, it will take 600ms and will follow the curve created in cubic-bezier -> there is webpage for it: https://cubic-bezier.com/#.17,.67,.83,.67 . By adding transition: transform speed in .pushable-area:active .button-front this will control only the speed the button will come back. Othervise it would control the speed of both movements.*/
+    transition: transform 300ms cubic-bezier(.3, .7, .4, 1);
+
+     /*We'll slide the foreground layer around with transform: translate. This is the best way to accomplish this effect, since transforms can be hardware-accelerated.*/
+
+     /* The translate() CSS function repositions an element in the horizontal and/or vertical directions. Its result is a <transform-function> data type. */
+    transform: translateY(-6px);
+
+    
+}
+
+.pushable-area:active .button-front{
+    transform: translateY(-2px);
+    
+    /* same as above. By adding transition transform property here as well I am able to control the speed the button will be pushed down here. */
+    transition: transform 34ms;
+}
+
+.pushable-area:hover {
+    /*how long it take from original state into hover state. In other words, how long it takes for button tu brighten up upon hovering around it*/
+    transition: filter 800ms;
+    filter: brightness(160%);
+}
+
+/*--------------            Clear Fix        ------------------------------------*/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+
+/*-------------------           Portfolio Section - Home            --------------------------------*/
+
+.portfolio_section_home{
+    
+    
+    border-top: 2px solid navy;
+    
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace  ;
+}
+
+.portfolio_section_home h2 {
+
+    font-size: 6rem;
+    padding: 3%;
+    margin: 0 0 0 160px;
+    
+}
+
+.portfolio_home {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 3px solid navy;
+    margin: 0 10px 0 170px;
+
+   
+
+}
+
+.portfolio_project {
+    width: 40%;
+    margin: 2%;
+    
+}
+
+.portfolio_project h3{
+
+    font-size: 2.3rem;
+    padding: 6%;
+    text-align: center;
+    
+
+}
+
+.portfolio_project img {
+
+    width: 100%;
+    height: 560px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------*/
+/*----------------------            CONTACT ME SECTION          -------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+
+.contact_me_section {
+    
+}
+
