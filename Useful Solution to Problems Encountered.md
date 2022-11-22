@@ -38,3 +38,16 @@ so **`right`** and **`top`** specifing where I want htem to stay
 Great help was this site
 
 https://www.w3schools.com/css/css_positioning.asp
+
+<br>
+
+## **Useful Tip**
+---
+If I am using left side navigation bar as in this example, in order to use the remaining space to the right I can use the following setup:
+
+```
+margin: 0 0 0 150px;
+width: 100% -150px;
+```
+
+Which will allow me to use the remaing space without problems

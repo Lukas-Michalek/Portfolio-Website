@@ -121,13 +121,23 @@ header {
    
 }
 
+.main_navigation ul li a{
+    display: block;
+    width: 100%;
+}
+
+.main_navigation ul li a:hover{
+    transition: 0.25s;
+    color: white;
+}
+
 .main_navigation ul li:nth-child(5){
     border-bottom: 1px solid salmon;
 }
 
 .social_sites{
     width: 100%;
-    background-color: lightsalmon;
+    background-color: lightblue;
     min-height: 100vh;
 }
 
@@ -178,7 +188,6 @@ header {
 
 .main_info_section {
    
-    border: 3px solid black;
     width: 100%;
     min-height: 725px;
 }
@@ -188,36 +197,40 @@ header {
 
     float:left;   
     margin: 3% 10% 0 15%;
-   /*  width: 1000px;
-    height: 400px; */
- 
-    
+    font-family: 'Aladin', cursive;
 
 }
 
 
 .main_info_text h1{
     margin: 20px 0 0 0;
-    font-family: 'Sacramento', cursive;
+    /* font-family: 'Sacramento', cursive; */
     font-size: 3rem;
+    letter-spacing: 0.2rem;
+
 }
 
 #greeting {
-    font-family: 'Sacramento', cursive;
+    /* font-family: 'Sacramento', cursive; */
     font-size: 7rem;
 }
 
 .main_info_text p {
     margin: 40px 0 0 0;
+    font-size: 1.8rem;
+
     
 }
 
 
-/*--------------            3D BUTTON           ------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------            3D BUTTON           -------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
 
 .contact_me_btn_settings{
 
-    margin: 50px 400px;
+    margin: 30px 400px;
 }
 
 .pushable-area {
@@ -291,7 +304,7 @@ header {
     display: block;
     padding: 12px 42px;
     border-radius: 12px;
-    font-size: 1.25 em;
+    font-size: 3rem;
     background: firebrick;
     color: white;
     
@@ -329,16 +342,23 @@ header {
 
 
 
+/*-----------------------------------------------------------------------------------------------*/
 /*-------------------           Portfolio Section - Home            --------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+
 
 .portfolio_section_home{
     
     
-    border-top: 2px solid navy;
+    margin-top: 3%;
+    font-family: 'Aladin', cursive;
+    letter-spacing: 0.2rem;
+
     
     width: 100%;
-    font-family: 'Courier New', Courier, monospace  ;
-}
+/*     font-family: 'Courier New', Courier, monospace  ;
+ */}
 
 .portfolio_section_home h2 {
 
@@ -353,7 +373,6 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-evenly;
     border: 3px solid navy;
     margin: 0 10px 0 170px;
@@ -370,7 +389,7 @@ header {
 
 .portfolio_project h3{
 
-    font-size: 2.3rem;
+    font-size: 3rem;
     padding: 6%;
     text-align: center;
     
@@ -389,6 +408,87 @@ header {
 /*---------------------------------------------------------------------------------------------------*/
 
 .contact_me_section {
+
+    margin: 5% 0 0 150px;
+    border: 5px solid black;
+    height:720px;
+    width: 100% -150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     
 }
 
+.contact_me_section > * {
+    width: 50%;
+}
+
+.contact_formular_section h2 {
+    font-family: 'Aladin', cursive;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 4rem;
+}
+
+.form_wrapper{
+    
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#contact_me_text {
+    margin: 5%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+#subject {
+    width: 100%;
+    
+}
+
+
+.name_and_email{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.name_and_email > * {
+    padding: 2%;
+}
+
+textarea {
+    resize: vertical; /* user can resize vertically, but width is fixed */
+  }
+
+
+/*---------------------------------------------------------------------------------------------------*/
+/*----------------------            MAP          -------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+
+.map_section {
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+}
+
+#map_title {
+    margin: 5%;
+    font-family: 'Aladin', cursive;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 4rem;
+}
+#map {
+    margin-top: 7%;
+    
+}
