@@ -86,11 +86,9 @@
 
     <div class="main_info_section" id="main_section_anchor">
         <div class="main_info_text">
-            <h1><span id="greeting">Hello, my name is Luke,</span><br>
-                It is my pleasure, to welcome you to my very own portfolio website. You can find everything about me on
-                this
-                page,
-                and in case of questions feel free to contact me anytime. </h1>
+            <h1><span id="greeting">Greetings, my name is Luke.</span><br>
+                It is my pleasure, to welcome you to my portfolio website. Here, you can find everything about me. And shall you have any question, please do not hesitate to contact me through button below.
+            </h1>
 
             <p><i>An aspiring FRONT END DEVELOPER</i></p>
 
@@ -186,15 +184,15 @@
                 <form>
                     <div class="name_and_email">
                         <div>
-                            <label for="name">Name</label>
+                            <label for="sender_name">Name</label>
                             <br>
-                            <input type="text" name="first_name" id="first_name">
+                            <input type="text" name="sender_name" id="sender_name" required>
                         </div>
 
                         <div>
                             <label for="email">E-mail</label>
                             <br>
-                            <input type="text" name="email" id="email">
+                            <input type="text" name="email" id="email" required>
                         </div>
                     </div>
 
@@ -203,13 +201,13 @@
 
                     <label for="subject">Subject</label>
                     <br>
-                    <input type="text" name="subject" id="subject">
+                    <input type="text" name="subject" id="subject" required>
 
 
                     <br>
                     <label for="message">Message</label>
                     <br>
-                    <textarea id="message" name="message" rows="5" cols="50"></textarea>
+                    <textarea id="message" name="message" rows="5" cols="50" required></textarea>
 
                     <br>
                     <div id="submit_btn">
